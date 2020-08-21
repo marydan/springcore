@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="dbean" class="com.stackroute.sample.Doctor">
+<constructor-arg name="dn" value="Mary"/>
+<constructor-arg index="1" value="10"/>
+<constructor-arg index="2" value="Cardiology"/>
+
+<!--  
+<property name="dname" value="Simpson"/>
+<property name="expr" value="5"/>
+
+-->
+
+</bean>
+
+<bean id="hbean" class="com.stackroute.sample.Hospital" autowire="constructor">
+
+<property name="hname" value="Cherian Hospital"/>
+
+
+<!--   <property name="doctor" ref="doctorbean"/>
+<constructor-arg index="0" ref="doctorbean"> </constructor-arg>
+ -->
+
+</bean>
+</beans>
